@@ -1,9 +1,9 @@
-using Module.Interfaces;
 using Api.Modules.Readings.Endpoints;
+using Module.Interfaces;
 
 namespace Api.Modules.Readings;
 
-internal sealed class ReadingsModule: IEndpointModule
+internal sealed class ReadingsModule : IEndpointModule
 {
     public IEndpointRouteBuilder MapEndpoints(IEndpointRouteBuilder endpoints)
     {

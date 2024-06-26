@@ -1,8 +1,8 @@
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
 using Api.Modules.Readings.Core;
 using Api.Modules.Shared.ApiClient.Services;
 using Api.Modules.Shared.Core;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Modules.Readings.Endpoints;
 

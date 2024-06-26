@@ -1,5 +1,5 @@
-using Module.Interfaces;
 using Api.Modules.Shared.ApiClient.Services;
+using Module.Interfaces;
 
 namespace Api.Modules.Shared.ApiClient;
 

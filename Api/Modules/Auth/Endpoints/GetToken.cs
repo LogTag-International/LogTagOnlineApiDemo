@@ -1,7 +1,7 @@
+using Api.Modules.Auth.Core;
+using Api.Modules.Shared.ApiClient.Services;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-using Api.Modules.Shared.ApiClient.Services;
-using Api.Modules.Auth.Core;
 
 namespace Api.Modules.Auth.Endpoints;
 

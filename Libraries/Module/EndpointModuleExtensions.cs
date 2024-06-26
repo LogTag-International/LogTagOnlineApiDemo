@@ -9,10 +9,10 @@ public static class EndpointModuleExtensions
     public static WebApplication MapEndpoints(this WebApplication app, Assembly mainAssembly)
     {
         IEnumerable<IEndpointModule> endpointModules = ModuleDiscovery<IEndpointModule>.DiscoverModules(mainAssembly);
-        
-        foreach (IEndpointModule endpointModule in endpointModules)        
+
+        foreach (IEndpointModule endpointModule in endpointModules)
             endpointModule.MapEndpoints(app);
-        
+
         return app;
     }
 }

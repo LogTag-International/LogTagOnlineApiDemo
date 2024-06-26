@@ -1,5 +1,5 @@
-using Module.Interfaces;
 using Api.Modules.Auth.Endpoints;
+using Module.Interfaces;
 
 namespace Api.Modules.Auth;
 

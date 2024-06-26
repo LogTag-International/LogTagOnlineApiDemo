@@ -1,5 +1,5 @@
-using Module.Interfaces;
 using Api.Modules.Devices.Endpoints;
+using Module.Interfaces;
 
 namespace Api.Modules.Devices;
 

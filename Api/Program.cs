@@ -1,7 +1,7 @@
-using System.Diagnostics;
-using System.Reflection;
 using Api.Extensions;
 using Module;
+using System.Diagnostics;
+using System.Reflection;
 
 // We will pass this to the endpoint module and service module auto discovery which lives in an external assembly
 Assembly mainAssembly = Assembly.GetAssembly(typeof(Program)) ?? throw new UnreachableException();
