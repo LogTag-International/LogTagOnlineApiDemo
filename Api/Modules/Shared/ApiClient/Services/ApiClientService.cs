@@ -9,7 +9,7 @@ internal sealed class ApiClientService : IDisposable
 
     private readonly string _apiPath;
 
-    private static readonly JsonSerializerOptions s_defaultSerializationOptions = new() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+    private static JsonSerializerOptions DefaultSerializationOptions { get => new() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase }; }
 
     public ApiClientService(HttpClient httpClient, IConfiguration configuration)
     {
@@ -19,10 +19,10 @@ internal sealed class ApiClientService : IDisposable
     }
 
     public async Task<TResponse> PostAsync<TResponse, TRequest>(TRequest body, string endpoint) =>
-        await (await _httpClient.PostAsJsonAsync($"{_apiPath}/{endpoint}", body, s_defaultSerializationOptions)).Content.ReadFromJsonAsync<TResponse>() ?? throw new NullReferenceException();
+        await (await _httpClient.PostAsJsonAsync($"{_apiPath}/{endpoint}", body, DefaultSerializationOptions)).Content.ReadFromJsonAsync<TResponse>() ?? throw new NullReferenceException();
 
     public async Task<TResponse> GetAsync<TResponse>(string endpoint) =>
-        await _httpClient.GetFromJsonAsync<TResponse>($"{_apiPath}/{endpoint}", s_defaultSerializationOptions) ?? throw new NullReferenceException();
+        await _httpClient.GetFromJsonAsync<TResponse>($"{_apiPath}/{endpoint}", DefaultSerializationOptions) ?? throw new NullReferenceException();
 
     public void Dispose() => _httpClient?.Dispose();
 
