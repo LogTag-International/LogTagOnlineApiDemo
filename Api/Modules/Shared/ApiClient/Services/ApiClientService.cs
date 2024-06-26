@@ -1,5 +1,5 @@
-using System.Text.Json;
 using Api.Extensions;
+using System.Text.Json;
 
 namespace Api.Modules.Shared.ApiClient.Services;
 
