@@ -39,3 +39,15 @@ The Swagger UI is available in debug mode and can be used to perform the followi
    - Use the `GetDevices` endpoint in the `DevicesModule` with a valid token and team ID to get your devices list.
 3. **Retrieve Device Readings**:
    - Use the `ReadingsModule` endpoints to fetch readings for the devices obtained from the `GetDevices` endpoint. Supply at the very least a valid token, team ID, and applicable serial number.
+4. **Retrieve Profiles List**:
+   - Use the `GetProfiles` endpoint in the `ProfilesModule` with a valid token and team ID to get your profiles list.
+5. **Retrieve Shipments List with Alarm Details**:
+   - Use the `GetShipmentDetails` endpoint in the `ShipmentsModule` to fetch details for a specific shipment. Supply a valid token, team ID, and Shipment State Filter Id.
+
+   ## Shipment State Filter Id
+   The Shipment State Filter Id is used to categorize the different states of a shipment:
+   - **Pending (1)**: The shipment is awaiting processing or has not yet started its journey.
+   - **InTransit (2)**: The shipment is currently on its way to the destination.
+   - **Completed (3)**: The shipment has successfully reached its destination and the process is finished.
+   - **Active (4)**: The shipment is currently being handled (includes both Pending and InTransit states).
+   - **All (5)**: Includes all shipments, regardless of their current status.
